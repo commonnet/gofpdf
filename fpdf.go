@@ -3350,7 +3350,7 @@ func (f *Fpdf) putimages() {
 		keyList = append(keyList, key)
 	}
 	if f.catalogSort {
-		sort.SliceStable(keyList, func(i, j int) bool { return f.images[keyList[i]].w < f.images[keyList[j]].w })
+		sort.SliceStable(keyList, func(i, j int) bool { return f.images[keyList[i]].i < f.images[keyList[j]].i })
 	}
 	for _, key = range keyList {
 		f.putimage(f.images[key])
